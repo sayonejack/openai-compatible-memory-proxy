@@ -58,19 +58,22 @@ cp .env.example .env
 python download_models.py
 ```
 
-支持的功能：
-- 自动下载指定的模型文件
-- 支持断点续传
-- 可配置下载目录
-- 显示下载进度
-- 模型完整性验证
-
 配置说明：
 ```bash
 # .env 中的模型相关配置
 HF_HOME=./models/hub           # 模型存储目录
 HF_DATASETS_CACHE=./models/datasets  # 数据集缓存目录
 MODEL_CACHE_DIR=./models/cache      # 模型缓存目录
+```
+
+## Installation
+
+install from source:
+
+```bash
+git clone https://github.com/yourusername/openai-compatible-memory-proxy.git
+cd openai-compatible-memory-proxy
+pip install -e .
 ```
 
 ## API接口
