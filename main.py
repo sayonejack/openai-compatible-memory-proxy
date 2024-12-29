@@ -197,11 +197,10 @@ async def health_check():
 if __name__ == "__main__":
     print("Initializing API server...")
     uvicorn.run(
-        "chat_api:app", 
+        "main:app", 
         host="0.0.0.0", 
         port=8000, 
         reload=False,
-        reload_dirs=["D:/Models/openai/test2"],  # 限制监视目录
         log_level="info",  # 设置 uvicorn 日志级别
         reload_delay=1  # 增加重载延迟，减少文件系统事件
     )
